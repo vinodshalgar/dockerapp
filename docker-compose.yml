@@ -18,7 +18,7 @@ services:
     image: mongo # specify image to build container from
     ports:
       - "27018:27017" # specify port forewarding
-  jenkins: # jenkins
-    image: jenkins # image of jenkins
-    ports:
-      - "8080:8080"
+  # jenkins: # jenkins
+  #   image: jenkins # image of jenkins
+  #   ports:
+  #     - "8080:8080"
