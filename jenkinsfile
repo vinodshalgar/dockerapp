@@ -4,7 +4,7 @@ node {
    }
    stage('Sonar Analyses') {
     //  steps{
-    //      echo 'this is test '  ooo
+    //      echo 'this is test '  
     //  }
    }
    stage('Integration Test') {
