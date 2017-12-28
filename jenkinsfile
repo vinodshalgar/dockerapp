@@ -1,6 +1,9 @@
 node {
    def mvnHome
    stage('Build App') { 
+
+       echo 'Build In Progress'
+       sleep(50)
    }
    stage('Sonar Analyses') {
     //  steps{
