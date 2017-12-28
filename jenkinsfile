@@ -3,7 +3,7 @@ node {
    stage('Build App') { 
    }
    stage('Sonar Analyses') {
-     
+     //vinod
    }
    stage('Integration Test') {
     
