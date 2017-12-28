@@ -3,7 +3,9 @@ node {
    stage('Build App') { 
    }
    stage('Sonar Analyses') {
-     
+     steps{
+         echo 'this is test '
+     }
    }
    stage('Integration Test') {
     
