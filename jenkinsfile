@@ -1,22 +1,23 @@
-ipeline {
-    agent any 
-
-    stages {
-        stage('Build') { 
-            steps { 
-                // sh 'make' 
-            }
-        }
-        stage('Test'){
-            steps {
-                // sh 'make check'
-                // junit 'reports/**/*.xml' 
-            }
-        }
-        stage('Deploy') {
-            steps {
-                // sh 'make publish'
-            }
-        }
-    }
+node {
+   def mvnHome
+   stage('Build App') { 
+   }
+   stage('Sonar Analyses') {
+     
+   }
+   stage('Integration Test') {
+    
+   }
+    stage('Prepare Release') {
+    
+   }
+    stage('Build Docker Images') {
+    
+   }
+    stage('Test Docker Images') {
+    
+   }
+    stage('Publish Docker Images') {
+    
+   }
 }
