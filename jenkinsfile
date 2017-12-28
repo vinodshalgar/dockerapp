@@ -2,7 +2,7 @@ node {
    def mvnHome
    stage('Build App') { 
 
-       echo 'Build In Progress'
+       echo 'Build In Progressa'
        sleep(50)
    }
    stage('Sonar Analyses') {
