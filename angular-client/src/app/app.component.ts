@@ -12,7 +12,7 @@ import 'rxjs/add/operator/map';
 export class AppComponent implements OnInit {
   title = 'app works!';
 
-  // Link to our api, pointing to localhost test changes
+  // Link to our api, pointing to localhost 
   API = 'http://52.230.83.134:3000';
 
   // Declare empty list of people
