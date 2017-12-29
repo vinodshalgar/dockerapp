@@ -9,5 +9,13 @@ pipeline {
                 // archiveArtifacts artifacts: '**/target/*.jar', fingerprint: true 
             }
         }
+
+         stage('Build1') {
+            steps {
+                echo 'hello'
+                // sh 'make' 
+                // archiveArtifacts artifacts: '**/target/*.jar', fingerprint: true 
+            }
+        }
     }
 }
