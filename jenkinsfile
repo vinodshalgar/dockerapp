@@ -1,9 +1,12 @@
-node {
-  stage('HelloWorld') {
-    echo 'Hello World'
-  }
+pipeline {
+    agent any
 
-  stage('git clone') {
-    echo 'Vinod here'
-  }
+    stages {
+        stage('Build') {
+            steps {
+                // sh 'make' 
+                // archiveArtifacts artifacts: '**/target/*.jar', fingerprint: true 
+            }
+        }
+    }
 }
