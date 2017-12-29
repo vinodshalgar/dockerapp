@@ -1,28 +1,9 @@
 node {
-   def mvnHome
-   stage('Build App') { 
+  stage('HelloWorld') {
+    echo 'Hello World'
+  }
 
-       echo 'Build In Progressa'
-       sleep(50)
-   }
-   stage('Sonar Analyses') {
-    //  steps{
-    //      echo 'this is test'  
-    //  }
-   }
-   stage('Integration Test') {
-    
-   }
-    stage('Prepare Release') {
-    
-   }
-    stage('Build Docker Images') {
-    
-   }
-    stage('Test Docker Images') {
-    
-   }
-    stage('Publish Docker Images') {
-    
-   }
+  stage('git clone') {
+    echo 'Vinod here'
+  }
 }
