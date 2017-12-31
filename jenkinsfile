@@ -3,7 +3,7 @@ node {
     // requires SonarQube Scanner 2.8+
     echo 'this is vinod shalgar hre'
     def scannerHome = tool 'sonarqube scanner 3.0.3';
-    withSonarQubeEnv('mySonarScanner') {
+    withSonarQubeEnv('mySonar') {
       sh "${scannerHome}/bin/sonar-scanner"
     }
   }
