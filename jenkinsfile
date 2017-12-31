@@ -1,30 +1,9 @@
-pipeline {
-    agent any
-
-    stages {
-        stage('Code Q') {
-            steps {
-                echo 'hello code quality'
-                def scannerHome = tool 'SonarQube Scanner 3.0.3.778';
-                withSonarQubeEnv('mySonarScanner') {
-                sh "${scannerHome}/bin/sonar-scanner"
-                }
-            }
-        }        
-        stage('Build') {
-            steps {
-                echo 'hello'
-                // sh 'make' 
-                // archiveArtifacts artifacts: '**/target/*.jar', fingerprint: true 
-            }
-        }
-
-         stage('Build1') {
-            steps {
-                echo 'hello'
-                // sh 'make' 
-                // archiveArtifacts artifacts: '**/target/*.jar', fingerprint: true 
-            }
-        }
+node { 
+  stage('SonarQube analysis') {
+    // requires SonarQube Scanner 2.8+
+    def scannerHome = tool 'SonarQube Scanner 3.0.3.778';
+    withSonarQubeEnv('mySonarScanner') {
+      sh "${scannerHome}/bin/sonar-scanner"
     }
+  }
 }
