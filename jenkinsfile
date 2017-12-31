@@ -1,6 +1,7 @@
 node { 
   stage('SonarQube analysis') {
     // requires SonarQube Scanner 2.8+
+    echo 'this is vinod shalgar hre'
     def scannerHome = tool 'SonarQube Scanner 3.0.3.778';
     withSonarQubeEnv('mySonarScanner') {
       sh "${scannerHome}/bin/sonar-scanner"
