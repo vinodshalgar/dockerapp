@@ -2,11 +2,15 @@ pipeline {
     agent any
 
     stages {
-        stage('Code Quality'){
-            def scannerHome = tool 'SonarQube Scanner 3.0.3.778';
-            withSonarQubeEnv('mySonarScanner') {
-            sh "${scannerHome}/bin/sonar-scanner"
-        }
+        stage('Code Q') {
+            steps {
+                echo 'hello code quality'
+                def scannerHome = tool 'SonarQube Scanner 3.0.3.778';
+                withSonarQubeEnv('mySonarScanner') {
+                sh "${scannerHome}/bin/sonar-scanner"
+                }
+            }
+        }        
         stage('Build') {
             steps {
                 echo 'hello'
